@@ -123,5 +123,13 @@ class ViewController: UIViewController {
     @IBAction func close(_ sender: Any) {
     }
     
+    
+    @IBAction func randomchoose(_ sender: Any) {
+        let guess = menusArray.randomElement()!
+        pizzaImageView.image = UIImage(named: guess)
+        
+        
+    }
+    
 }
 

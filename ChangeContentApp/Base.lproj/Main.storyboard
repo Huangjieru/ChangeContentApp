@@ -54,31 +54,6 @@
                                     <action selector="changePageControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="EX2-gd-1V9"/>
                                 </connections>
                             </pageControl>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lobster" translatesAutoresizingMaskIntoConstraints="NO" id="7sk-so-5TA" userLabel="Pizza Image View">
-                                <rect key="frame" x="29" y="54" width="316" height="199"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="fVn-xO-vup" appends="YES" id="j0M-FK-RdL"/>
-                                    <outletCollection property="gestureRecognizers" destination="znV-Fv-Ix1" appends="YES" id="WZZ-Lx-3Ym"/>
-                                </connections>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JpP-1m-TpZ">
-                                <rect key="frame" x="105" y="341" width="140" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4Q-Dn-Mhu">
-                                <rect key="frame" x="253" y="344" width="46" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
-                                <connections>
-                                    <action selector="close:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvX-LR-MtQ"/>
-                                    <action selector="inputbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQ3-Xo-hvE"/>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GiV-MH-rtV">
                                 <rect key="frame" x="51" y="294" width="272" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -91,6 +66,40 @@
                                     <action selector="selectMenu:" destination="BYZ-38-t0r" eventType="valueChanged" id="LPy-Gi-bb2"/>
                                 </connections>
                             </segmentedControl>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lobster" translatesAutoresizingMaskIntoConstraints="NO" id="7sk-so-5TA" userLabel="Pizza Image View">
+                                <rect key="frame" x="29" y="54" width="316" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fVn-xO-vup" appends="YES" id="j0M-FK-RdL"/>
+                                    <outletCollection property="gestureRecognizers" destination="znV-Fv-Ix1" appends="YES" id="WZZ-Lx-3Ym"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JpP-1m-TpZ">
+                                <rect key="frame" x="140" y="340" width="129" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4Q-Dn-Mhu">
+                                <rect key="frame" x="277" y="343" width="46" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="close:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvX-LR-MtQ"/>
+                                    <action selector="inputbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQ3-Xo-hvE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Yz-3V-dYs">
+                                <rect key="frame" x="51" y="343" width="81" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Guess"/>
+                                <connections>
+                                    <action selector="randomchoose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="okR-fZ-ByR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
