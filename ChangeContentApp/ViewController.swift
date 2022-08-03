@@ -61,6 +61,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
     var index = 0
@@ -112,5 +113,15 @@ class ViewController: UIViewController {
 //        pizzaPageControl.currentPage = index
         updataUI()
     }
+    
+    
+   
+    @IBAction func inputbutton(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func close(_ sender: Any) {
+    }
+    
 }
 

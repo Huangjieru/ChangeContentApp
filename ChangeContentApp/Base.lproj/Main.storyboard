@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="餡料 龍蝦沙拉.鳳梨.花枝.蟹條.香草粉.芥末醬  美味說明 特調濃郁白醬搭配肥美的花枝與蟹肉棒, 加上特調龍蝦沙拉,吃出滿口鮮甜的海洋風味!  價格 大披薩 $349" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El9-aq-UhZ">
-                                <rect key="frame" x="51" y="358" width="272" height="256"/>
+                                <rect key="frame" x="51" y="369" width="272" height="256"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -54,8 +54,33 @@
                                     <action selector="changePageControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="EX2-gd-1V9"/>
                                 </connections>
                             </pageControl>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lobster" translatesAutoresizingMaskIntoConstraints="NO" id="7sk-so-5TA" userLabel="Pizza Image View">
+                                <rect key="frame" x="29" y="54" width="316" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fVn-xO-vup" appends="YES" id="j0M-FK-RdL"/>
+                                    <outletCollection property="gestureRecognizers" destination="znV-Fv-Ix1" appends="YES" id="WZZ-Lx-3Ym"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JpP-1m-TpZ">
+                                <rect key="frame" x="105" y="341" width="140" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4Q-Dn-Mhu">
+                                <rect key="frame" x="253" y="344" width="46" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="close:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvX-LR-MtQ"/>
+                                    <action selector="inputbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQ3-Xo-hvE"/>
+                                </connections>
+                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GiV-MH-rtV">
-                                <rect key="frame" x="51" y="302" width="272" height="32"/>
+                                <rect key="frame" x="51" y="294" width="272" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Lobster"/>
@@ -66,15 +91,6 @@
                                     <action selector="selectMenu:" destination="BYZ-38-t0r" eventType="valueChanged" id="LPy-Gi-bb2"/>
                                 </connections>
                             </segmentedControl>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lobster" translatesAutoresizingMaskIntoConstraints="NO" id="7sk-so-5TA" userLabel="Pizza Image View">
-                                <rect key="frame" x="29" y="54" width="316" height="199"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="fVn-xO-vup" appends="YES" id="j0M-FK-RdL"/>
-                                    <outletCollection property="gestureRecognizers" destination="znV-Fv-Ix1" appends="YES" id="WZZ-Lx-3Ym"/>
-                                </connections>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,19 +113,20 @@
                         <action selector="nextArrow:" destination="BYZ-38-t0r" id="nOD-28-xeQ"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="rPe-9Z-T7Y">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="5" id="rPe-9Z-T7Y">
                     <connections>
                         <action selector="nextArrow:" destination="BYZ-38-t0r" id="0xa-mK-ugT"/>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+            <point key="canvasLocation" x="28" y="68.815592203898049"/>
         </scene>
     </scenes>
     <resources>
         <image name="Lobster" width="400" height="295"/>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
